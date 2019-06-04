@@ -18,7 +18,6 @@ class APIClient:
     def get_request(self, r, path):
         start_time = time.time()
         try:
-
             r = requests.get("{}{}".format(self.base_uri, path))
             print("Status Code: {}".format(r.status_code))
             print("Headers: {}".format(r.headers))
@@ -48,7 +47,7 @@ class APIClient:
 class LocustRequests(Locust):
 
     def __init__(self):
-        super(LocustRequests).__init__()
+        super(LocustRequests, self).__init__()
         self.client = APIClient(self.host)
 
 
