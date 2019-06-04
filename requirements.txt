@@ -1,0 +1,5 @@
+locust
+setuptools
+wheel
+locustio
+requests
